@@ -6,7 +6,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Yaska/react-use-id-hook.git"
+    "url": "https://github.com/ArtyomFahradyan/hooks"
   },
   "typings": "dist/index.d.ts",
   "files": [
@@ -32,14 +32,14 @@
       "pre-commit": "tsdx lint"
     }
   },
-  "author": "Wout Mertens",
+  "author": "ArtyomFahradyan https://github.com/ArtyomFahradyan",
   "size-limit": [
     {
-      "path": "dist/t-hook.cjs.production.min.js",
+      "path": "dist/t-hooks.cjs.production.min.js",
       "limit": "10 KB"
     },
     {
-      "path": "dist/react-use-id-hook.esm.js",
+      "path": "dist/t-hooks.esm.js",
       "limit": "10 KB"
     }
   ],
