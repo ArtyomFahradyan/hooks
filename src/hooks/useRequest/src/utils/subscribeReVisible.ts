@@ -1,4 +1,4 @@
-import { isBrowser } from "helpers";
+import { isBrowser } from "../../../../helpers";
 import isDocumentVisible from "./isDocumentVisible";
 
 type Listener = () => void;

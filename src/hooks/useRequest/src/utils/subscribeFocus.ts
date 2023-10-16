@@ -1,5 +1,5 @@
 // from swr
-import { isBrowser } from "helpers";
+import { isBrowser } from "../../../../helpers";
 import isDocumentVisible from "./isDocumentVisible";
 import isOnline from "./isOnline";
 

@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import { CustomAny } from "types";
-import useCreation from "hooks/useCreation";
-import useUnmount from "hooks/useUnmount";
+import { useCreation } from "../../../useCreation";
+import { useUnmount } from "../../../useUnmount";
 import type { Plugin } from "../types";
 import { setCache, getCache } from "../utils/cache";
 import type { CachedData } from "../utils/cache";

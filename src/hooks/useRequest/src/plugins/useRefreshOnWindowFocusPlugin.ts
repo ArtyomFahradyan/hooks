@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 import { CustomAny } from "types";
-import useUnmount from "hooks/useUnmount";
+import { useUnmount } from "../../../useUnmount";
 import type { Plugin } from "../types";
 import limit from "../utils/limit";
 import subscribeFocus from "../utils/subscribeFocus";

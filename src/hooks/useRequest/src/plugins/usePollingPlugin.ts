@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import { CustomAny } from "types";
-import useUpdateEffect from "hooks/useUpdateEffect";
+import { useUpdateEffect } from "../../../useUpdateEffect";
 import type { Plugin, Timeout } from "../types";
 import isDocumentVisible from "../utils/isDocumentVisible";
 import subscribeReVisible from "../utils/subscribeReVisible";

@@ -1,4 +1,4 @@
-import { isBrowser } from "helpers";
+import { isBrowser } from "../../../../helpers";
 export default function isDocumentVisible(): boolean {
   if (isBrowser()) {
     return document.visibilityState !== "hidden";

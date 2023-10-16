@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import { CustomAny } from "types";
-import useUpdateEffect from "hooks/useUpdateEffect";
+import { useUpdateEffect } from "../../../useUpdateEffect";
 import type { Plugin } from "../types";
 
 // support refreshDeps & ready

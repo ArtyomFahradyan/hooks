@@ -1,4 +1,4 @@
-import { isBrowser } from "helpers";
+import { isBrowser } from "../../../../helpers";
 
 export default function isOnline(): boolean {
   if (isBrowser() && typeof navigator.onLine !== "undefined") {

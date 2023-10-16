@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import type { DependencyList } from "react";
-import { depsAreSame } from "helpers";
-export default function useCreation<T>(factory: () => T, deps: DependencyList) {
+import { depsAreSame } from "../helpers";
+export function useCreation<T>(factory: () => T, deps: DependencyList) {
   const { current } = useRef({
     deps,
     obj: undefined as undefined | T,

@@ -1,10 +1,10 @@
 import { CustomAny } from "types";
-import useCreation from "../../useCreation";
-import useLatest from "../../useLatest";
-import useMemoizedFn from "../../useMemoizedFn";
-import useMount from "../../useMount";
-import useUnmount from "../../useUnmount";
-import useUpdate from "../../useUpdate";
+import { useCreation } from "../../useCreation";
+import { useLatest } from "../../useLatest";
+import { useMemoizedFn } from "../../useMemoizedFn";
+import { useMount } from "../../useMount";
+import { useUnmount } from "../../useUnmount";
+import { useUpdate } from "../../useUpdate";
 import Fetch from "./Fetch";
 import type { Options, Plugin, Result, Service } from "./types";
 function useRequestImplement<TData, TParams extends CustomAny[]>(
@@ -29,7 +29,7 @@ function useRequestImplement<TData, TParams extends CustomAny[]>(
 
   const update = useUpdate();
 
-  const fetchInstance = useCreation(() => {
+  const fetchInstance: CustomAny = useCreation(() => {
     const initState = plugins
       .map((p) => p?.onInit?.(fetchOptions))
       .filter(Boolean);

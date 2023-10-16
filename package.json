@@ -1,6 +1,6 @@
 {
-  "name": "t-hooks",
-  "version": "1.0.0",
+  "name": "t-react-hooks",
+  "version": "1.0.6",
   "main": "dist/index.js",
   "module": "dist/t-hooks.js",
   "license": "MIT",
@@ -32,7 +32,11 @@
       "pre-commit": "tsdx lint"
     }
   },
-  "author": "ArtyomFahradyan https://github.com/ArtyomFahradyan",
+  "author": {
+    "name": "Artyom Fahradyan",
+    "email": "artyom.fahradyan5495@gmail.com",
+    "url": "https://github.com/ArtyomFahradyan"
+  },
   "size-limit": [
     {
       "path": "dist/t-hooks.cjs.production.min.js",
@@ -47,6 +51,7 @@
     "@size-limit/preset-small-lib": "^4.9.1",
     "@types/react": "^18.2.28",
     "@types/react-dom": "^18.2.13",
+    "axios": "^1.5.1",
     "husky": "^4.3.6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

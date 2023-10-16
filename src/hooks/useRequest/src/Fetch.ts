@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-parameter-properties */
 import type { MutableRefObject } from "react";
 import { CustomAny } from "types";
-import { isFunction } from "helpers";
+import { isFunction } from "../../../helpers";
 import type {
   FetchState,
   Options,
@@ -116,21 +116,21 @@ export default class Fetch<TData, TParams extends CustomAny[]> {
       }
 
       return res;
-    } catch (error: CustomAny) {
+    } catch (error) {
       if (currentCount !== this.count) {
         // prevent run.then when request is canceled
         return new Promise(() => ({}));
       }
 
       this.setState({
-        error,
+        error: error as CustomAny,
         loading: false,
       });
 
-      this.options.onError?.(error, params);
+      this.options.onError?.(error as CustomAny, params);
       this.runPluginHandler("onError", error, params);
 
-      this.options.onFinally?.(params, undefined, error);
+      this.options.onFinally?.(params, undefined, error as CustomAny);
 
       if (currentCount === this.count) {
         this.runPluginHandler("onFinally", params, undefined, error);
