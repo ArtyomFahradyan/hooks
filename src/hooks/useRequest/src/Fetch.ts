@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-parameter-properties */
 import type { MutableRefObject } from "react";
 import { CustomAny } from "types";
-import { isFunction } from "../../../helpers";
+import { devLog, isFunction } from '../../../helpers'
 import type {
   FetchState,
   Options,
@@ -106,6 +106,8 @@ export default class Fetch<TData, TParams extends CustomAny[]> {
         loading: false,
       });
 
+      devLog(`Req:Success ${this.serviceRef.current?.name} call`, { data: res, params });
+
       this.options.onSuccess?.(res, params);
       this.runPluginHandler("onSuccess", res, params);
 
@@ -127,6 +129,7 @@ export default class Fetch<TData, TParams extends CustomAny[]> {
         loading: false,
       });
 
+      devLog(`Req:Error ${this.serviceRef.current?.name} call`, { error: error as CustomAny, params });
       this.options.onError?.(error as CustomAny, params);
       this.runPluginHandler("onError", error, params);
 
