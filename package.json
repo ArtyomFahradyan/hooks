@@ -1,8 +1,15 @@
 {
   "name": "t-react-hooks",
-  "version": "1.0.8",
+  "version": "1.0.12",
   "main": "dist/index.js",
-  "module": "dist/t-hooks.js",
+  "module": "dist/t-react-hooks.esm.js",
+  "type": "module",
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "import": "./dist/t-react-hooks.esm.js"
+    }
+  },
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -10,8 +17,7 @@
   },
   "typings": "dist/index.d.ts",
   "files": [
-    "dist",
-    "src"
+    "dist"
   ],
   "engines": {
     "node": ">=10"
