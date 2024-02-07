@@ -1,16 +1,17 @@
+import { env } from "process";
 /**
  * Checks if env is dev env
  */
 export function isLocal() {
-  return process.env.REACT_APP_ENV === "local";
+  return env.REACT_APP_ENV === "local";
 }
 
 export function isDev() {
-  return isLocal() || process.env.REACT_APP_ENV === "development";
+  return isLocal() || env.REACT_APP_ENV === "development";
 }
 
 export function isStage() {
-  return process.env.REACT_APP_ENV === "staging";
+  return env.REACT_APP_ENV === "staging";
 }
 
 export function isDevOrStage() {
