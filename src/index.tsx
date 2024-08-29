@@ -9,6 +9,5 @@ export { useUpdate } from "./hooks/useUpdate";
 export { useUpdateEffect } from "./hooks/useUpdateEffect";
 export * from "./hooks/useRequest/src/types";
 export * from "./helpers/jsonHelpers";
-export * from "./helpers/envHelpers";
 export * from "./helpers/arrayHelpers";
 export * from "./helpers/functionHelpers";

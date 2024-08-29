@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 
 export function useBreakpoint() {
-  const width = window.innerWidth;
+  const [width, setWidth] = useState(window.innerWidth)
+
   const [xs, setXs] = useState(true);
   const [sm, setSm] = useState(true);
   const [md, setMd] = useState(true);
@@ -17,6 +18,20 @@ export function useBreakpoint() {
     setSm(width >= 576);
     setXs(width < 576);
   }, [width]);
+
+  const handleResize = () => {
+    setWidth(window.innerWidth);
+  };
+
+
+  useEffect(() => {
+    window.addEventListener('resize', handleResize);
+
+    // Cleanup event listener on component unmount
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   return { xs, sm, md, lg, xl, xxl };
 }

@@ -1,6 +1,5 @@
 import type { DependencyList } from "react";
 import { CustomAny } from "types";
-import { isDevOrStage } from "./envHelpers";
 
 export function debounce(fn: (...args: CustomAny[]) => void, timeout: number) {
   let timer: ReturnType<typeof setTimeout>;
@@ -12,13 +11,6 @@ export function debounce(fn: (...args: CustomAny[]) => void, timeout: number) {
 
     timer = setTimeout(() => fn(...args), timeout);
   };
-}
-
-export function devLog(...params: CustomAny): void {
-  if (isDevOrStage()) {
-    // eslint-disable-next-line no-console
-    console.log(...params);
-  }
 }
 
 export function uuidv4() {

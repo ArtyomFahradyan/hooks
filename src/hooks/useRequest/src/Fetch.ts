@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-parameter-properties */
 import type { MutableRefObject } from "react";
 import { CustomAny } from "types";
-import { devLog, isFunction } from '../../../helpers'
+import { isFunction } from '../../../helpers'
 import type {
   FetchState,
   Options,
@@ -9,6 +9,14 @@ import type {
   Service,
   Subscribe,
 } from "./types";
+
+function devLog(...params: CustomAny): void {
+  if (process.env.REACT_APP_ENV === "development") {
+    // eslint-disable-next-line no-console
+    console.log(...params);
+  }
+}
+
 export default class Fetch<TData, TParams extends CustomAny[]> {
   pluginImpls: PluginReturn<TData, TParams>[] | undefined;
   count = 0;
