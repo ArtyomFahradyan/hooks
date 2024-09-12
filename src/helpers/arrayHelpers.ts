@@ -1,16 +1,11 @@
 /**
  * Converts enum to array
  */
-export type Enum<E> = Record<keyof E, string | number> & {
+type Enum<E> = Record<keyof E, string | number> & {
   [k: string]: string | number;
 };
-
 export function enumToArray<E extends Enum<E>>(enumObject: E) {
-  const enumArray = [];
-
-  for (const key in enumObject) {
-    enumArray.push(enumObject[key]);
-  }
-
-  return enumArray;
+  return Object.keys(enumObject)
+    .filter((key) => isNaN(Number(key))) // Filter out numeric keys for numeric enums
+    .map((key) => enumObject[key as keyof E]);
 }

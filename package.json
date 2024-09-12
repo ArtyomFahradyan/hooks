@@ -1,6 +1,6 @@
 {
   "name": "t-react-hooks",
-  "version": "1.0.17",
+  "version": "1.0.18",
   "main": "dist/index.js",
   "module": "dist/t-react-hooks.esm.js",
   "type": "module",
