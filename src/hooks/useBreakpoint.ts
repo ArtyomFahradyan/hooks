@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
 
 export function useBreakpoint() {
-  const [width, setWidth] = useState(window.innerWidth)
-
+  const [width, setWidth] = useState(window.innerWidth);
   const [xs, setXs] = useState(true);
   const [sm, setSm] = useState(true);
   const [md, setMd] = useState(true);
