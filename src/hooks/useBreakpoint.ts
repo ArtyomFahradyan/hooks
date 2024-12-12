@@ -7,10 +7,12 @@ export function useBreakpoint() {
   const [md, setMd] = useState(true);
   const [lg, setLg] = useState(true);
   const [xl, setXl] = useState(true);
+  const [xsl, setXsl] = useState(true);
   const [xxl, setXxl] = useState(true);
 
   useEffect(() => {
     setXxl(width >= 1600);
+    setXsl(width >= 1400);
     setXl(width >= 1200);
     setLg(width >= 992);
     setMd(width >= 768);
@@ -32,5 +34,5 @@ export function useBreakpoint() {
     };
   }, []);
 
-  return { xs, sm, md, lg, xl, xxl };
+  return { xs, sm, md, lg, xl, xxl, xsl };
 }
